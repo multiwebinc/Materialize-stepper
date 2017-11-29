@@ -177,7 +177,7 @@ $.fn.openStep = function(step, callback) {
 $.fn.closeAction = function(order, callback) {
    var closable = this.removeClass('active').find('.step-content');
    if(window.innerWidth < 993 || !this.closest('ul').hasClass('horizontal')) {
-      closable.stop().slideUp(300,"easeOutQuad", callback);
+      closable.stop().slideUp(300,"swing", callback);
    } else {
       if(order==1) {
          closable.animate({left: '-100%'},function(){closable.css({display: 'none', left: '0%'}, callback);});
